@@ -1,12 +1,6 @@
 #!/usr/bin/perl
 #use warnings;
 #use strict;
-#NOTICE: PLEASE READ CAREFULLY:  PROVIDES THIS SOFTWARE TO YOU ONLY UPON
-#YOUR ACCEPTANCE OF ADVANTEST\u2019S TERMS OF USE. THE SOFTWARE IS PROVIDED \u201cAS IS\u201d
-#WITHOUT WARRANTY OF ANY KIND \u2019S LIABILITY FOR SUCH SOFTWARE LIMITED
-#TO THE FULLEST EXTENT PERMITTED UNDER THE LAW.
-
-
 require Getopt::Long;    # process command line options
 
 #####Global Variables
@@ -379,7 +373,7 @@ sub site_to_site_check{
 sub usage {
 print STDOUT "\n
 $0    v1.1    for 93000 SOC tester
-    created by Bryan Gonzalez Verigy LTD -  8/9/2007
+    created by Bryan Gonzalez  -  8/9/2007
    
 Purpose:
     Analyze datalog for:
@@ -398,8 +392,8 @@ Usage output:
      Datalog1.data_diff
  
 Sample Output:
-    Datalog Analyzer v1.0 by Bryan Gonzalez, Verigy LTD.
-INPUT FILE:  bcm6348A2_Jul_30.data:
+    Datalog Analyzer v1.0 by Bryan Gonzalez, .
+INPUT FILE:  device_Jul_30.data:
 
 TESTNUMBER COLLISION:
 1000   extloop                           0.500      <        0      <    1.500       Site:1 (F)
@@ -421,20 +415,20 @@ MISSING/ MISMATCH TESTS FROM SITE2 TO SITE 1:
 	203    vreg2 1.2v 200mA                  1.000 V   <=        0 V   <=    1.300 V     Site:2 (F)
 	Total differences:  2
 
-UNMATCHING TESTNUMBERS FROM bcm6348A2_Jul_30.data TO bcm6348.data
+UNMATCHING TESTNUMBERS FROM deviceA2_Jul_30.data TO device.data
 2      IO_CONT                           1.000     <=        1     <=    1.000       Site:1
 2      IO_CONT                           1.000     <=        1     <=    1.000       Site:2
 10     1.2v Power                        0.000 mW  <= 198.2845 mW  <=  450.000 mW    Site:2
 	Total unmatched: 3
 
-UNMATCHING TESTSUITE NAMES FROM bcm6348A2_Jul_30.data TO bcm6348.data
+UNMATCHING TESTSUITE NAMES FROM deviceA2_Jul_30.data TO device.data
 14     leakage_pu                        1.000     <=        1     <=    1.000       Site:1
 22     emac_4                            0.500      <        0      <    1.500       Site:2 (F)
 	Total unmatched: 2
 
 Note: Please Fix any test-number problems first.
       As this may give a false positive.
-LIMITS MISMATCH FROM bcm6348A2_Jul_30.data TO bcm6348.data
+LIMITS MISMATCH FROM deviceA2_Jul_30.data TO device.data
 7      PLL current                     -10.000 mA  <= 31.6751 mA  <=   80.000 mA    Site:1
 	Total unmatched: 1
 
@@ -449,7 +443,5 @@ sub errorMessage{
 }
 ###################################################################
 ###                  Bryan Gonzalez                             ### 
-###                github.com/rbgonzalez                        ###
 ###	               Aug 7, 2007                              ###
-###           gonzalez.bryan@gmail.com            	        ###
 ################################################################### 
